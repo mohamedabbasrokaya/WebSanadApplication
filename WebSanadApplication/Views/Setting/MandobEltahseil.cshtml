@@ -1,0 +1,25 @@
+﻿<tbody>
+    @foreach (var person in Model.SEARCH_Account)
+    {
+        <tr>
+            <th>
+                @person.ACC_ID
+            </th>
+            <th> @person.ACC_CODE</th>
+            <th> @person.ACC_EN_NAME</th>
+            <th> @person.ACC_AR_NAME</th>
+
+
+        </tr>
+    }
+
+
+</tbody>
+
+onmouseover="GetDataFromDataTable()"
+<script>
+    function GetDataFromDataTable() {
+        var parent = document.getElementById("parent").val
+        parent.style.display = 'none'
+
+    }

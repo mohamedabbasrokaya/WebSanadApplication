@@ -1,0 +1,70 @@
+﻿@model IEnumerable<SEARCH_ACCOUNTSResult>;
+<style>
+    .Result_Box {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<br />
+
+<a asp-controller="Setting" asp-action="Search" ></a>
+
+<br />
+
+<br />
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/about_index.css">
+</head>
+<body>
+    <div class="row">
+
+        <table class="table" id="Table">
+            <thead>
+            
+            <th>الحساب</th>
+            <th>دائن </th>
+            <th>مدين</th>
+            <th> الشرح</th>
+             
+            
+        </thead>
+                <tbody>
+                @foreach(var person in Model)
+                {
+                <tr>
+                    <th>
+                        @person.ACC_ID
+                    </th>
+                    <th> @person.ACC_CODE</th>
+                    <th> @person.ACC_EN_NAME</th>
+                    <th> @person.ACC_AR_NAME</th>
+                 
+                   
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <button class="btn btn-primary" id="save_button">save</button>
+    </div>
+
+   
+
+
+    @section scripts{
+        
+        <script type="text/javascript">
+            var saves;
+            $(document).ready(function(){
+           saves=  $('table').DataTable({
+           
+           
+            });
+            });
+        </script> 
+
+    }
+</body>
+</html>

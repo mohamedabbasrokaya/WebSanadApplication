@@ -1,0 +1,148 @@
+﻿@using WebSanadApplication.Models;
+
+@model GET_ENTRY_SETTINGResult;
+
+
+@{
+    ViewData["Title"] = "Basics";
+}
+
+
+
+                <form class="form-inline mb-4" asp-action="Mowarden" asp-controller="Moreden">
+                    <div class="row">
+                        <div class="col">
+                        <label  asp-for="@Model.ENTRY_SETTING_ID">كود السند:</label>
+
+                        <input asp-for="@Model.ENTRY_SETTING_ID" type="text" id="code" name="code"><br>
+                        </div>
+          
+                   
+                    <div class="col">
+                    <label asp-for="@Model.ACCOUNTNAME">الحساب:</label>
+                    <input asp-for="@Model.ACCOUNTNAME" type=" text" id="Account-Box" name="Account" placeholder="search" autocomplete="off">
+                    <span asp-validation-for="@Model.ACCOUNTNAME" class="text-danger"></span>
+
+                    <button>search</button>
+                    </div>
+                    </div>
+
+                </form>
+
+
+                <form class="input mb-4" asp-action="Basics" asp-controller="Setting" >
+                    <div class="row g-1 align-items-center">
+                        <div class="col">
+                             <label class="col-form-label" asp-for="@Model.ENTRY_SETTING_ID">مندوب التحصيل :</label>
+
+
+                            <select asp-for="@Model.ENTRY_SETTING_ID" class="text-danger col-6">
+                                </select>
+
+
+                     </div>
+                     <div class="col">
+                            <i class="bi bi-file-plus"></i>
+                     </div>
+                     <div class="col">
+
+
+                    <label asp-for="@Model.ENTRY_SETTING_ID">رقم سند التحصيل :</label>
+                    <input asp-for="@Model.ENTRY_SETTING_ID" class="NumberSanadEltahseil" type="number" name="number"><br>
+                    <span asp-validation-for="@Model.ENTRY_SETTING_ID" class="text-danger"></span>
+                        </div>
+                    </div>
+                </form>
+
+
+                <form class="input mb-4" asp-action="Basics" asp-controller="Setting">
+
+                    <div class="row">
+                        <div class="col">
+                    <label for="code"> بيان السند</label>
+                    <input type="text" class="EndRow" name="code" placeholder="ادخل هنا ما تريد البحث عنو "><br>
+                    </div>
+
+                    <div class="col">
+
+
+                    <label asp-for="@Model.CURRENCY_NAME">العمله  : </label>
+            <input asp-for="@Model.CURRENCY_NAME" id="CURRENC_NAME" class="text-danger col-6"><br>
+                    <span asp-validation-for="@Model.CURRENCY_NAME" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                    <label asp-for="@Model.CREDIT_INDEX">سعر الصرف  :</label>
+                    <input asp-for="@Model.CREDIT_INDEX" class="saeirElsarf" type="number" name="number"><br>
+                    <span asp-validation-for="@Model.CREDIT_INDEX" class="text-danger"></span>
+                    </div>
+                    </div>
+
+                </form>
+
+
+
+
+
+          <div class="row">         
+              <div class="col">
+
+        <label asp-for="@Model.ACCOUNTNAME">  الحساب: </label>
+
+        <input asp-for="@Model.ACCOUNTNAME" type="text" id="AccountSearchs"> <br>
+                            <span class="text-danger"></span>
+                        </div>
+
+
+
+        <div class="col">
+            <label>الدائن  :</label>
+            <input class="saeirElsarf" type="number"><br>
+            <span class="text-danger"></span>
+        </div>
+
+        <div class="col">
+            <label>مدين  :</label>
+            <input " class="saeirElsarf" type="number" name="number"><br>
+            <span class="text-danger"></span>
+        </div>
+
+        <div class="col">
+            <label>شرح  :</label>
+            <input class="saeirElsarf" type="text"><br>
+            <span class="text-danger"></span>
+        </div>
+        </div>
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered" id="tableDetails">
+       <thead table-dark>
+           <tr>
+           <th scope="col">ACC_ID</th>
+                        <th scope="col">ACC_CODE</th>
+                        <th scope="col">ACC_AR_NAME</th>
+                        <th scope="col">ACC_EN_NAME</th>
+                        <th scope="col">ACC_TYPE_ID</th>
+                        <th scope="col">ACC_MAX_DEBIT</th>
+                        <th scope="col">ACC_MUST_COST_CENTER</th>
+
+                    </tr>
+
+
+       </thead>
+       <tbody>
+
+       </tbody>
+
+
+   </table>
+        </div>
+        </div>
+   </div>
+
+
